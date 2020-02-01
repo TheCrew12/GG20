@@ -1245,6 +1245,9 @@ MonoBehaviour:
   counter: 0
   UpperLeft: {x: -10, y: 4}
   LowerRight: {x: 10, y: -4}
+  AdultAgeScale: 0.15
+  AgeUpScaleStep: 0.01
+  AgeUpRate: 100
 --- !u!114 &2873767694609657051
 MonoBehaviour:
   m_ObjectHideFlags: 0

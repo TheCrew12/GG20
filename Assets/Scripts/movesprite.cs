@@ -21,7 +21,7 @@ private void Start() {
     //   mousePos1 = Camera.main.ScreenToWorldPoint(mousePos1);
     //   Debug.Log(mousePos1.x + " - " + mousePos1.y);
 
-      if(isBeingHeld == true)
+      if(isBeingHeld == true && !monsterScript.isInMotel)
       {
             Vector3 mousePos;
             mousePos = Input.mousePosition;
