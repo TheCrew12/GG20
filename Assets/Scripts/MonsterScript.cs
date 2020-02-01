@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MonsterScript : MonoBehaviour
 {
+    public float stepSize = 0.2f;
+
     void Start()
     {
         
@@ -11,7 +13,7 @@ public class MonsterScript : MonoBehaviour
 
     void Update()
     {
-        
+        RandomMovement();
     }
 
     //Gets all the body parts of a monster
@@ -26,5 +28,29 @@ public class MonsterScript : MonoBehaviour
         }
 
         return parts;
+    }
+
+    private int direction;
+    public void RandomMovement()
+    {
+        //Process direction movement
+        switch (direction)
+        {
+            case 0:
+                transform.position = new Vector2(transform.position.x + stepSize, transform.position.y);
+                break;
+            case 1:
+                transform.position = new Vector2(transform.position.x - stepSize, transform.position.y);
+                break;
+            case 2:
+                transform.position = new Vector2(transform.position.x, transform.position.y + stepSize);
+                break;
+            case 3:
+                transform.position = new Vector2(transform.position.x, transform.position.y - stepSize);
+                break;
+
+        }
+
+        direction = Random.Range(0,3);
     }
 }
