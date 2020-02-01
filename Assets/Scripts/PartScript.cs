@@ -6,7 +6,15 @@ public enum BodyPartType
 {
     Head,
     Body,
-    Leg
+    Leg,
+    Arm,
+    Eye,
+    Nose,
+    Mouth,
+    Boob,
+    Ear,
+    Hair,
+    Crotch
 }
 
 public class PartScript : MonoBehaviour
@@ -18,7 +26,7 @@ public class PartScript : MonoBehaviour
     public float widthScale = 1; // How wide is the image
     public bool invert = false;
 
-    public SpriteRenderer sp;
+    private SpriteRenderer sp;
 
     void Start()
     {
