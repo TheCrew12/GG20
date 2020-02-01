@@ -5,6 +5,14 @@ using UnityEngine;
 public class MonsterScript : MonoBehaviour
 {
     public float stepSize = 0.2f;
+    public bool isInMotel = false;
+    public bool canMove = true;
+
+    public int StepTime = 30;
+    public int counter = 0;
+
+    public Vector2 UpperLeft = new Vector2(-10, 4);
+    public Vector2 LowerRight = new Vector2(10, -4);
 
     void Start()
     {
@@ -13,7 +21,13 @@ public class MonsterScript : MonoBehaviour
 
     void Update()
     {
-        RandomMovement();
+        if(canMove && counter > StepTime)
+        {
+            RandomMovement();
+            counter = 0;
+        }
+
+        counter++;
     }
 
     //Gets all the body parts of a monster
@@ -37,20 +51,24 @@ public class MonsterScript : MonoBehaviour
         switch (direction)
         {
             case 0:
-                transform.position = new Vector2(transform.position.x + stepSize, transform.position.y);
+                if(transform.position.x < LowerRight.x) {
+                transform.position = new Vector2(transform.position.x + stepSize, transform.position.y); }
                 break;
             case 1:
-                transform.position = new Vector2(transform.position.x - stepSize, transform.position.y);
+                if(transform.position.x > UpperLeft.x) {
+                transform.position = new Vector2(transform.position.x - stepSize, transform.position.y);}
                 break;
             case 2:
-                transform.position = new Vector2(transform.position.x, transform.position.y + stepSize);
+                if(transform.position.y < UpperLeft.y) {
+                transform.position = new Vector2(transform.position.x, transform.position.y + stepSize);}
                 break;
             case 3:
-                transform.position = new Vector2(transform.position.x, transform.position.y - stepSize);
+                if(transform.position.y > LowerRight.y) {
+                transform.position = new Vector2(transform.position.x, transform.position.y - stepSize);}
                 break;
 
         }
 
-        direction = Random.Range(0,3);
+        direction = Random.Range(0,4);
     }
 }
