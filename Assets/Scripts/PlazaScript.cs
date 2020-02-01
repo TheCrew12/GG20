@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class PlazaScript : MonoBehaviour
 {
-    // Start is called before the first frame update
+    Object[] heads;
+
     void Start()
     {
-        
+        heads = Resources.LoadAll("Images/BodyParts/Heads", typeof(Texture2D));
+        Debug.Log(heads.Length);
     }
-
-    // Update is called once per frame
     void Update()
     {
         

@@ -14,13 +14,35 @@ public class MonsterScript : MonoBehaviour
     public Vector2 UpperLeft = new Vector2(-10, 4);
     public Vector2 LowerRight = new Vector2(10, -4);
 
+    //Age system
+    public float AdultAgeScale = 0.15f;
+    public float AgeUpScaleStep = 0.01f;
+    public int AgeUpRate = 30;
+    private float age = 0;
+    private int ageCounter = 0;
+
     void Start()
     {
         
     }
 
-    void Update()
+    void FixedUpdate()
     {
+        if(ageCounter < AgeUpRate)
+        {
+            ageCounter++;
+        }
+        else
+        {
+            ageCounter = 0;
+            age++;
+            var scale = this.transform.localScale.x + AgeUpScaleStep;
+            if(this.transform.localScale.x < AdultAgeScale)
+            {
+                this.transform.localScale = new Vector3(scale,scale,scale);
+            }
+        }
+
         if(canMove && counter > StepTime)
         {
             RandomMovement();
