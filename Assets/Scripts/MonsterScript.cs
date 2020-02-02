@@ -93,4 +93,11 @@ public class MonsterScript : MonoBehaviour
 
         direction = Random.Range(0,4);
     }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        if(other.tag == "Monster")
+        {
+            FindObjectOfType<AudioManager>().Play("oof");
+        }
+    }
 }

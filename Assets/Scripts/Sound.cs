@@ -1,8 +1,6 @@
 ﻿using UnityEngine.Audio;
 using UnityEngine;
 
-/********* THIS CODE IS BY BRACKEYS (brackeys.com) ********/
-
 [System.Serializable]
 public class Sound {
 
@@ -21,9 +19,6 @@ public class Sound {
 	public float pitchVariance = .1f;
 
 	public bool loop = false;
-
-	[Range(0f, 1f)]
-	public float spatialBlend = 0f;//float for spacial blend
 
 	public AudioMixerGroup mixerGroup;
 
