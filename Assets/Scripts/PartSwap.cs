@@ -18,7 +18,11 @@ public class PartSwap : MonoBehaviour
 
     public void ClickedEVENT()
     {
-        Debug.Log("Hooo");
         imagePic.sprite = PlazaLoader.GetRandomPartOfType( type );
+    }
+
+    public Sprite GetSelectedPart()
+    {
+        return imagePic.sprite;
     }
 }
