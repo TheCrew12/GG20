@@ -2,7 +2,6 @@ using UnityEngine.Audio;
 using System;
 using UnityEngine;
 
-/********* THIS CODE IS BY BRACKEYS (brackeys.com) ********/
 public class AudioManager : MonoBehaviour
 {
 
@@ -34,10 +33,6 @@ public class AudioManager : MonoBehaviour
 		}
 	}
 
-	void Start()
-	{
-	}
-
 	public void Play(string sound)
 	{
 		Sound s = Array.Find(sounds, item => item.name == sound);
@@ -49,7 +44,6 @@ public class AudioManager : MonoBehaviour
 
 		s.source.volume = s.volume * (1f + UnityEngine.Random.Range(-s.volumeVariance / 2f, s.volumeVariance / 2f));
 		s.source.pitch = s.pitch * (1f + UnityEngine.Random.Range(-s.pitchVariance / 2f, s.pitchVariance / 2f));
-		s.source.spatialBlend = s.spatialBlend;//spatial blend to make sound come from object
 
 		s.source.Play();
 	}
