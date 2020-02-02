@@ -260,6 +260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91647e34590ff49deb8131dd66571fd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monster: {fileID: 2873767694609657030, guid: 63bb1eec3e26c4529bed94a25f3a7118, type: 3}
 --- !u!1 &995991342
 GameObject:
   m_ObjectHideFlags: 0
