@@ -443,6 +443,7 @@ GameObject:
   - component: {fileID: 793362174251588375}
   - component: {fileID: 793362174251588373}
   - component: {fileID: 793362174251588374}
+  - component: {fileID: 5965083946170148773}
   m_Layer: 0
   m_Name: Arm-Left
   m_TagString: Untagged
@@ -530,6 +531,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &5965083946170148773
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793362174251588368}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b24ff9d061268d847a9b9044d34a36fd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &793362174266814994
 GameObject:
   m_ObjectHideFlags: 0
@@ -1307,7 +1327,7 @@ Animator:
   m_GameObject: {fileID: 793362175556434542}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7ffaa77d18337d541990367ef5c24766, type: 2}
+  m_Controller: {fileID: 9100000, guid: aeffabed4be878549b856c2d253f26db, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1674,6 +1694,7 @@ GameObject:
   - component: {fileID: 2873767695019741688}
   - component: {fileID: 2873767695019741691}
   - component: {fileID: 2873767695019741690}
+  - component: {fileID: 1994776956348348263}
   m_Layer: 0
   m_Name: Leg-Right
   m_TagString: Untagged
@@ -1761,6 +1782,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1994776956348348263
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2873767695019741689}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d117b20ce63a9014c9f2a5dfc2cfc812, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2873767695910668052
 GameObject:
   m_ObjectHideFlags: 0
@@ -1772,6 +1812,7 @@ GameObject:
   - component: {fileID: 2873767695910668055}
   - component: {fileID: 2873767695910668054}
   - component: {fileID: 2873767695910668073}
+  - component: {fileID: 4675986559834534512}
   m_Layer: 0
   m_Name: Leg-Left
   m_TagString: Untagged
@@ -1859,3 +1900,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &4675986559834534512
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2873767695910668052}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 79884b1d139514a449844bcd3db64e37, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
