@@ -59,6 +59,8 @@ public class Shaker : MonoBehaviour
             shouldShake = true;
             power += 0.2f;
             duration = initialDuration;
+
+            AudioManager.instance.Play("squeak");
         }
         
     }
