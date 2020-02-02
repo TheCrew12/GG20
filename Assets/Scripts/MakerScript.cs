@@ -1,16 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class MakerScript : MonoBehaviour
 {
     public List<PartSwap> swapParts;
-    public Vector3 SpawnPoint;
+    public GameObject SpawnPoint;
     public GameObject monster;
 
     public void MakeDaMonster()
     {
-        var baby = Instantiate(monster, SpawnPoint, new Quaternion());
+        var baby = Instantiate(monster, SpawnPoint.transform.position, new Quaternion());
 
         foreach (Transform child in baby.transform)
         {
@@ -28,7 +30,7 @@ public class MakerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        this.GetComponent<Button>().onClick.AddListener(MakeDaMonster);
     }
 
     // Update is called once per frame
