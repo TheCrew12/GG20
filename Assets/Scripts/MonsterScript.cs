@@ -97,7 +97,13 @@ public class MonsterScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.tag == "Monster")
         {
-            FindObjectOfType<AudioManager>().Play("oof");
+            FindObjectOfType<AudioSource>().Play();
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D other) {
+        if(other.gameObject.tag == "Monster")
+        {
+            GetComponent<AudioSource>().Play();
         }
     }
 }

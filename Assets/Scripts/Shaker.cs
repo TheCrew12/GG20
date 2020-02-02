@@ -40,6 +40,7 @@ public class Shaker : MonoBehaviour
             {
                 shake.localPosition = startPosition + Random.insideUnitSphere * power;
                 duration -= Time.deltaTime * slowDownAmount;
+                GetComponent<AudioSource>().Play();
             }
             else
             {
@@ -59,8 +60,6 @@ public class Shaker : MonoBehaviour
             shouldShake = true;
             power += 0.2f;
             duration = initialDuration;
-
-            AudioManager.instance.Play("squeak");
         }
         
     }
