@@ -12,11 +12,13 @@ public class PartSwap : MonoBehaviour
 
     private void Start() 
     {
+        this.GetComponent<Button>().onClick.AddListener(ClickedEVENT);
         imagePic = GetComponent<Image>();
     }
 
-    public void OnPointerClick(PointerEventData eventData)
+    public void ClickedEVENT()
     {
+        Debug.Log("Hooo");
         imagePic.sprite = PlazaLoader.GetRandomPartOfType( type );
     }
 }
