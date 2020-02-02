@@ -40,6 +40,7 @@ public class Shaker : MonoBehaviour
             {
                 shake.localPosition = startPosition + Random.insideUnitSphere * power;
                 duration -= Time.deltaTime * slowDownAmount;
+                //GetComponent<AudioSource>().Play();
             }
             else
             {
