@@ -17,6 +17,7 @@ public class Shaker : MonoBehaviour
 
     Vector3 startPosition;
     float initialDuration;
+    public bool CanShake = true;
 
 
     // Start is called before the first frame update
@@ -31,6 +32,8 @@ public class Shaker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!CanShake) {return;}
+
         if(shouldShake)
         {
             if(duration > 0)

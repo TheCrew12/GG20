@@ -14,7 +14,8 @@ public enum BodyPartType
     Boob,
     Ear,
     Hair,
-    Crotch
+    Crotch,
+    Hand
 }
 
 public class PartScript : MonoBehaviour

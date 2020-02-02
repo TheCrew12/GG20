@@ -5,15 +5,22 @@ using UnityEngine;
 public class MotelScript : MonoBehaviour
 {
     public int CoolDown = 60;
-    public int BirthDelay = 10;
     public float BirthScale = 0.001f;
+    public int ClicksForBirth = 10;
     public GameObject monster;
+    public GameObject returnPoint;
+    public ParticleSystem loveParticles;
     private List<MonsterScript> monstersInMotel;
     private int Timer = -1;
+    private int ClickCounter = 0;
+
+    private Shaker shaker;
 
     void Start() 
     {
         monstersInMotel = new List<MonsterScript>();
+        shaker = GetComponent<Shaker>();
+        loveParticles.Stop();
     }
 
     private void Update() 
@@ -44,18 +51,36 @@ public class MotelScript : MonoBehaviour
         monster.canMove = false;
         monstersInMotel.Add(monster);
 
-        //THE HOTEL IS FULL GET TO THE MAKING
         if(monstersInMotel.Count >= 2)
         {
-            MakeBaby(monstersInMotel[0], monstersInMotel[1]);
-            foreach(MonsterScript motelMonster in monstersInMotel) 
-            { 
-                motelMonster.isInMotel = false;
-                monster.canMove = true;
-                motelMonster.transform.position = this.transform.position;
+            shaker.CanShake = true;
+            loveParticles.Play();
+        }
+    }
+
+    void OnMouseDown()
+    {
+        if(Input.GetMouseButtonDown(0))
+        {
+            if(monstersInMotel.Count >= 2)
+            {
+                ClickCounter++;
+                if(ClickCounter > ClicksForBirth)
+                {
+                    MakeBaby(monstersInMotel[0], monstersInMotel[1]);
+                    foreach(MonsterScript motelMonster in monstersInMotel) 
+                    { 
+                        motelMonster.isInMotel = false;
+                        motelMonster.canMove = true;
+                        motelMonster.transform.position = returnPoint.transform.position;
+                    }
+                    monstersInMotel.Clear();
+                    loveParticles.Stop();
+                    shaker.CanShake = false;
+                    Timer = 0;
+                    ClickCounter = 0;
+                }
             }
-            monstersInMotel.Clear();
-            Timer = 0;
         }
     }
 
@@ -67,7 +92,7 @@ public class MotelScript : MonoBehaviour
 
         parts = Utils.Shuffle<PartScript>(parts); //Randomize parts
 
-        var baby = Instantiate(monster, this.transform.position, new Quaternion());
+        var baby = Instantiate(monster, returnPoint.transform.position, new Quaternion());
         baby.transform.localScale = new Vector3(BirthScale,BirthScale,BirthScale);
 
         //Attach bodyparts

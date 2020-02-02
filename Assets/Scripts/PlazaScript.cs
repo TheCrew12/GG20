@@ -13,6 +13,7 @@ public class PlazaScript : MonoBehaviour
     Object[] ears;
     Object[] eyes;
     Object[] hairs;
+    Object[] hands;
     Object[] heads;
     Object[] legs;
     Object[] mouths;
@@ -27,6 +28,7 @@ public class PlazaScript : MonoBehaviour
         ears = Resources.LoadAll("Images/BodyParts/Ear", typeof(Sprite));
         eyes = Resources.LoadAll("Images/BodyParts/Eye", typeof(Sprite));
         hairs = Resources.LoadAll("Images/BodyParts/Hair", typeof(Sprite));
+        hands = Resources.LoadAll("Images/BodyParts/Hand", typeof(Sprite));
         heads = Resources.LoadAll("Images/BodyParts/Heads", typeof(Sprite));
         legs = Resources.LoadAll("Images/BodyParts/Legs", typeof(Sprite));
         mouths = Resources.LoadAll("Images/BodyParts/Mouths", typeof(Sprite));
@@ -89,6 +91,7 @@ public class PlazaScript : MonoBehaviour
     public Sprite GetRandomEar(){ return (Sprite)ears[Random.Range(0, ears.Length)]; }
     public Sprite GetRandomEye(){ return (Sprite)eyes[Random.Range(0, eyes.Length)]; }
     public Sprite GetRandomHair(){ return (Sprite)hairs[Random.Range(0, hairs.Length)]; }
+    public Sprite GetRandomHand(){ return (Sprite)hands[Random.Range(0, hands.Length)]; }
     public Sprite GetRandomHead(){ return (Sprite)heads[Random.Range(0, heads.Length)]; }
     public Sprite GetRandomLeg(){ return (Sprite)legs[Random.Range(0, legs.Length)]; }
     public Sprite GetRandomMouth(){ return (Sprite)mouths[Random.Range(0, mouths.Length)]; }
