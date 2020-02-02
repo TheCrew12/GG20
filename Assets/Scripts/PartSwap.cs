@@ -1,18 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class PartSwap : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public BodyPartType type;
+    private Image imagePic;
+    private int step = 0;
+
+    private void Start() 
     {
-        
+        imagePic = GetComponent<Image>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnPointerClick(PointerEventData eventData)
     {
-        
+        imagePic.sprite = PlazaLoader.GetRandomPartOfType( type );
     }
 }
