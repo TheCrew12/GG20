@@ -565,6 +565,31 @@ MonoBehaviour:
   commandList:
   - {fileID: 908589680}
   - {fileID: 908589676}
+--- !u!1 &914816358 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2873767695910668052, guid: 63bb1eec3e26c4529bed94a25f3a7118,
+    type: 3}
+  m_PrefabInstance: {fileID: 366622131}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &914816362
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914816358}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 79884b1d139514a449844bcd3db64e37, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1013247458
 GameObject:
   m_ObjectHideFlags: 0
@@ -1039,6 +1064,31 @@ MonoBehaviour:
   shouldShake: 0
   durationAffector: 0.1
   powerAffector: 0.2
+--- !u!1 &1296463050 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2873767695019741689, guid: 63bb1eec3e26c4529bed94a25f3a7118,
+    type: 3}
+  m_PrefabInstance: {fileID: 366622131}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1296463054
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296463050}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d117b20ce63a9014c9f2a5dfc2cfc812, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1328015633 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 793362175556434542, guid: 63bb1eec3e26c4529bed94a25f3a7118,
@@ -1055,7 +1105,7 @@ Animator:
   m_GameObject: {fileID: 1328015633}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7ffaa77d18337d541990367ef5c24766, type: 2}
+  m_Controller: {fileID: 9100000, guid: aeffabed4be878549b856c2d253f26db, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 793362173841372205}
   - component: {fileID: 793362173841372211}
   - component: {fileID: 793362173841372204}
+  - component: {fileID: 3099683955921010892}
   m_Layer: 0
   m_Name: Ear-Left
   m_TagString: Untagged
@@ -98,6 +99,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &3099683955921010892
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793362173841372206}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6c4120bf0fde4a54cb22a6ccc7c97373, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &793362174013521734
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,6 +227,7 @@ GameObject:
   - component: {fileID: 793362174069570638}
   - component: {fileID: 793362174069570636}
   - component: {fileID: 793362174069570637}
+  - component: {fileID: 7186104354463712637}
   m_Layer: 0
   m_Name: Crotch
   m_TagString: Untagged
@@ -294,6 +315,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &7186104354463712637
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793362174069570639}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8f830b6264bae484392d034cebf76039, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &793362174216959464
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,6 +639,7 @@ GameObject:
   - component: {fileID: 793362174533799765}
   - component: {fileID: 793362174533799771}
   - component: {fileID: 793362174533799764}
+  - component: {fileID: 1055552665190459171}
   m_Layer: 0
   m_Name: Hair
   m_TagString: Untagged
@@ -686,6 +727,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1055552665190459171
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793362174533799766}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f17f00bd9d0a0ed44aafa43ea926e21a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &793362174594460765
 GameObject:
   m_ObjectHideFlags: 0
@@ -795,6 +855,7 @@ GameObject:
   - component: {fileID: 793362174944386159}
   - component: {fileID: 793362174944386157}
   - component: {fileID: 793362174944386158}
+  - component: {fileID: 6254305820669658083}
   m_Layer: 0
   m_Name: Boob-Left
   m_TagString: Untagged
@@ -882,6 +943,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &6254305820669658083
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793362174944386152}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c69b6707890ada342b2a79826b28a9bb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &793362175076627015
 GameObject:
   m_ObjectHideFlags: 0
@@ -893,6 +973,7 @@ GameObject:
   - component: {fileID: 793362175076627014}
   - component: {fileID: 793362175076627012}
   - component: {fileID: 793362175076627013}
+  - component: {fileID: 8879099655531424156}
   m_Layer: 0
   m_Name: Eye-Left
   m_TagString: Untagged
@@ -980,6 +1061,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &8879099655531424156
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793362175076627015}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a684338e32be1654cae7ee340c916d21, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &793362175305603990
 GameObject:
   m_ObjectHideFlags: 0
@@ -991,6 +1091,7 @@ GameObject:
   - component: {fileID: 793362175305603989}
   - component: {fileID: 793362175305603995}
   - component: {fileID: 793362175305603988}
+  - component: {fileID: 4450482463998200292}
   m_Layer: 0
   m_Name: Boob-Right
   m_TagString: Untagged
@@ -1078,6 +1179,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &4450482463998200292
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793362175305603990}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a9c21b2d8fac848438e5aa66c61a5c92, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &793362175556434542
 GameObject:
   m_ObjectHideFlags: 0
@@ -1089,6 +1209,7 @@ GameObject:
   - component: {fileID: 793362175556434541}
   - component: {fileID: 793362175556434547}
   - component: {fileID: 793362175556434540}
+  - component: {fileID: 7683216807372547072}
   m_Layer: 0
   m_Name: Arm-Right
   m_TagString: Untagged
@@ -1176,6 +1297,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &7683216807372547072
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793362175556434542}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7ffaa77d18337d541990367ef5c24766, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2873767694609657030
 GameObject:
   m_ObjectHideFlags: 0
