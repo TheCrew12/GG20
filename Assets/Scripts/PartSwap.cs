@@ -9,6 +9,7 @@ public class PartSwap : MonoBehaviour
     public BodyPartType type;
     private Image imagePic;
     private int step = 0;
+    private Sprite selectedPart;
 
     private void Start() 
     {
@@ -18,11 +19,12 @@ public class PartSwap : MonoBehaviour
 
     public void ClickedEVENT()
     {
-        imagePic.sprite = PlazaLoader.GetRandomPartOfType( type );
+        selectedPart = PlazaLoader.GetRandomPartOfType( type );
+        imagePic.sprite = selectedPart;
     }
 
     public Sprite GetSelectedPart()
     {
-        return imagePic.sprite;
+        return selectedPart;
     }
 }
