@@ -7,24 +7,23 @@ using UnityEngine.EventSystems;
 public class PartSwap : MonoBehaviour
 {
     public BodyPartType type;
+    public BodyPartSide side = BodyPartSide.Center;
     private Image imagePic;
-    private int step = 0;
-    private Sprite selectedPart;
 
     private void Start() 
     {
-        this.GetComponent<Button>().onClick.AddListener(ClickedEVENT);
+        GetComponent<Button>().onClick.AddListener(RandomisePart);
         imagePic = GetComponent<Image>();
+        RandomisePart(); //Randomise on startup
     }
 
-    public void ClickedEVENT()
+    public void RandomisePart()
     {
-        selectedPart = PlazaLoader.GetRandomPartOfType( type );
-        imagePic.sprite = selectedPart;
+        imagePic.sprite = PlazaLoader.GetRandomPartOfType( type );
     }
 
     public Sprite GetSelectedPart()
     {
-        return selectedPart;
+        return imagePic.sprite;
     }
 }

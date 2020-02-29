@@ -54,10 +54,13 @@ public static class PlazaLoader
                 return GetRandomMouth(); break;
             case BodyPartType.Nose:
                 return GetRandomNose(); break;
+            case BodyPartType.Head:
+                return GetRandomHead(); break;
+            case BodyPartType.Hand:
+                return GetRandomHand(); break;
             default:
                 return GetRandomArm();
         }
-        return null;
     }
 }
 
@@ -80,13 +83,11 @@ public class PlazaScript : MonoBehaviour
         PlazaLoader.mouths = Resources.LoadAll("Images/BodyParts/Mouths", typeof(Sprite));
         PlazaLoader.noses = Resources.LoadAll("Images/BodyParts/Noses", typeof(Sprite));
 
-        // StartUpStuff();
+        //StartUpStuff();
     }
 
     private void StartUpStuff()
     {
-        SpawnRandomMonster();
-        SpawnRandomMonster();
         SpawnRandomMonster();
     }
 
@@ -99,7 +100,7 @@ public class PlazaScript : MonoBehaviour
             var part = child.GetComponent<PartScript>();
             if(part == null) {return;}
             var type = part.type;
-            part.PartImage = PlazaLoader.GetRandomPartOfType(type);
+            part.SetPartImage(PlazaLoader.GetRandomPartOfType(type));
         }
     }
 }

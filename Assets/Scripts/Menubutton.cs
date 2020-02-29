@@ -8,10 +8,10 @@ public class Menubutton : MonoBehaviour
 {
     private void Start() 
     {
-        this.GetComponent<Button>().onClick.AddListener(ClickedEVENT);
+        GetComponent<Button>().onClick.AddListener(ClickedEVENT);
     }
 
-    public void ClickedEVENT()
+    private void ClickedEVENT()
     {
         SceneManager.LoadScene(1);
     }

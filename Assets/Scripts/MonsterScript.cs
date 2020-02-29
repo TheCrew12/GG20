@@ -21,11 +21,6 @@ public class MonsterScript : MonoBehaviour
     private float age = 0;
     private int ageCounter = 0;
 
-    void Start()
-    {
-        
-    }
-
     void FixedUpdate()
     {
         if(ageCounter < AgeUpRate)
@@ -55,19 +50,26 @@ public class MonsterScript : MonoBehaviour
     //Gets all the body parts of a monster
     public List<PartScript> GetBodyParts()
     {
-        List<PartScript> parts = new List<PartScript>();
-
-        foreach (Transform child in this.transform)
+        return GetAllBodyParts(transform);
+    }
+    
+    private static List<PartScript> GetAllBodyParts(Transform body)
+    {
+        var parts = new List<PartScript>();
+        
+        foreach (Transform child in body)
         {
             var part = child.GetComponent<PartScript>();
             if(part != null) { parts.Add(part); }
+
+            parts.AddRange(GetAllBodyParts(child));
         }
 
         return parts;
     }
 
     private int direction;
-    public void RandomMovement()
+    private void RandomMovement()
     {
         //Process direction movement
         switch (direction)
@@ -94,13 +96,15 @@ public class MonsterScript : MonoBehaviour
         direction = Random.Range(0,4);
     }
 
-    private void OnTriggerEnter2D(Collider2D other) {
+    private void OnTriggerEnter2D(Collider2D other) 
+    {
         if(other.tag == "Monster")
         {
             FindObjectOfType<AudioSource>().Play();
         }
     }
-    private void OnCollisionEnter2D(Collision2D other) {
+    private void OnCollisionEnter2D(Collision2D other) 
+    {
         if(other.gameObject.tag == "Monster")
         {
             GetComponent<AudioSource>().Play();

@@ -47,9 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PartImage: {fileID: 21300000, guid: 5859f391c50554bcc95cb3e7f4f62b84, type: 3}
   type: 8
-  dominance: 100
-  heightScale: 1
-  widthScale: 1
+  side: 1
   invert: 0
 --- !u!212 &793362173841372204
 SpriteRenderer:
@@ -164,9 +162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PartImage: {fileID: 21300000, guid: ec29bd21e456f403a8ed2b869758fd2b, type: 3}
   type: 5
-  dominance: 100
-  heightScale: 1
-  widthScale: 1
+  side: 0
   invert: 0
 --- !u!212 &793362174013521732
 SpriteRenderer:
@@ -263,9 +259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PartImage: {fileID: 21300000, guid: f39f48457035445b293da1bdd583654f, type: 3}
   type: 10
-  dominance: 100
-  heightScale: 1
-  widthScale: 1
+  side: 0
   invert: 0
 --- !u!212 &793362174069570637
 SpriteRenderer:
@@ -380,9 +374,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PartImage: {fileID: 21300000, guid: 81ff8a73bb981444dad3b9048aa14ad8, type: 3}
   type: 6
-  dominance: 100
-  heightScale: 1
-  widthScale: 1
+  side: 0
   invert: 0
 --- !u!212 &793362174216959470
 SpriteRenderer:
@@ -480,9 +472,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PartImage: {fileID: 21300000, guid: 5f394b7ee276a45b7a94b49798e2fa27, type: 3}
   type: 3
-  dominance: 100
-  heightScale: 1
-  widthScale: 1
+  side: 1
   invert: 0
 --- !u!212 &793362174251588374
 SpriteRenderer:
@@ -597,9 +587,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PartImage: {fileID: 21300000, guid: b01218a6e4ee54e2895a0684ad282b16, type: 3}
   type: 8
-  dominance: 100
-  heightScale: 1
-  widthScale: 1
+  side: 2
   invert: 0
 --- !u!212 &793362174266814992
 SpriteRenderer:
@@ -696,9 +684,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PartImage: {fileID: 21300000, guid: 25b802b22287b4a8fae36fabea2c0932, type: 3}
   type: 9
-  dominance: 100
-  heightScale: 1
-  widthScale: 1
+  side: 0
   invert: 0
 --- !u!212 &793362174533799764
 SpriteRenderer:
@@ -813,9 +799,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PartImage: {fileID: 21300000, guid: 18a01a90b857e4ab09945f6e61ccc1a6, type: 3}
   type: 4
-  dominance: 100
-  heightScale: 1
-  widthScale: 1
+  side: 2
   invert: 1
 --- !u!212 &793362174594460771
 SpriteRenderer:
@@ -912,9 +896,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PartImage: {fileID: 21300000, guid: d36f2df0347504fbfbf8786b1c517c85, type: 3}
   type: 7
-  dominance: 100
-  heightScale: 1
-  widthScale: 1
+  side: 1
   invert: 0
 --- !u!212 &793362174944386158
 SpriteRenderer:
@@ -1030,9 +1012,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PartImage: {fileID: 21300000, guid: 5eb4a38063efe41e2aae8f9fc6673fcd, type: 3}
   type: 4
-  dominance: 100
-  heightScale: 1
-  widthScale: 1
+  side: 1
   invert: 0
 --- !u!212 &793362175076627013
 SpriteRenderer:
@@ -1148,9 +1128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PartImage: {fileID: 21300000, guid: c6651aed027d944ffa69c81d587bb309, type: 3}
   type: 7
-  dominance: 100
-  heightScale: 1
-  widthScale: 1
+  side: 2
   invert: 1
 --- !u!212 &793362175305603988
 SpriteRenderer:
@@ -1267,9 +1245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PartImage: {fileID: 21300000, guid: d5e6d6d6fe6204e26a4e67421652b4e8, type: 3}
   type: 3
-  dominance: 100
-  heightScale: 1
-  widthScale: 1
+  side: 2
   invert: 1
 --- !u!212 &793362175556434540
 SpriteRenderer:
@@ -1351,9 +1327,10 @@ GameObject:
   - component: {fileID: 2873767694609657051}
   - component: {fileID: 2873767694609657050}
   - component: {fileID: 8521492194857336320}
+  - component: {fileID: -1204347227910269886}
   m_Layer: 0
   m_Name: Monster
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1462,6 +1439,102 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!82 &-1204347227910269886
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2873767694609657030}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 654fe5fe4185f6746aae574d4875efac, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &2873767694611562984
 GameObject:
   m_ObjectHideFlags: 0
@@ -1508,9 +1581,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PartImage: {fileID: 21300000, guid: affbf792108454116b20324d25f0ee2a, type: 3}
   type: 1
-  dominance: 100
-  heightScale: 1
-  widthScale: 1
+  side: 0
   invert: 0
 --- !u!212 &2873767694611562989
 SpriteRenderer:
@@ -1614,9 +1685,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PartImage: {fileID: 21300000, guid: 6135ba46804444cb7b11e66d241af780, type: 3}
   type: 0
-  dominance: 100
-  heightScale: 1
-  widthScale: 1
+  side: 0
   invert: 0
 --- !u!212 &2873767694652284870
 SpriteRenderer:
@@ -1732,9 +1801,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PartImage: {fileID: 21300000, guid: 1a90c21a24a2644538c626d9b25fed41, type: 3}
   type: 2
-  dominance: 100
-  heightScale: 1
-  widthScale: 1
+  side: 2
   invert: 1
 --- !u!212 &2873767695019741690
 SpriteRenderer:
@@ -1850,9 +1917,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PartImage: {fileID: 21300000, guid: 1a90c21a24a2644538c626d9b25fed41, type: 3}
   type: 2
-  dominance: 100
-  heightScale: 1
-  widthScale: 1
+  side: 1
   invert: 0
 --- !u!212 &2873767695910668073
 SpriteRenderer:
@@ -1968,9 +2033,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PartImage: {fileID: 21300000, guid: ff293a37320f044ba8e9f74fa065b5e5, type: 3}
   type: 11
-  dominance: 100
-  heightScale: 1
-  widthScale: 1
+  side: 1
   invert: 0
 --- !u!212 &3106676969603954925
 SpriteRenderer:
@@ -2086,9 +2149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PartImage: {fileID: 21300000, guid: ff293a37320f044ba8e9f74fa065b5e5, type: 3}
   type: 11
-  dominance: 100
-  heightScale: 1
-  widthScale: 1
+  side: 2
   invert: 1
 --- !u!212 &6594365045997743682
 SpriteRenderer:

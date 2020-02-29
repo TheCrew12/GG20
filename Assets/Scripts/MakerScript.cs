@@ -1,41 +1,57 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.EventSystems;
 
 public class MakerScript : MonoBehaviour
 {
+    public Button makeButton;
+    public Button closeButton;
+    public Button randomButton;
+    
     public List<PartSwap> swapParts;
     public GameObject SpawnPoint;
     public GameObject monster;
+    public GameObject monsterMakerUI;
 
-    public void MakeDaMonster()
-    {
-        var baby = Instantiate(monster, SpawnPoint.transform.position, new Quaternion());
-
-        foreach (Transform child in baby.transform)
-        {
-            var part = child.GetComponent<PartScript>();
-            if(part == null) {return;}
-            var type = part.type;
-            foreach( PartSwap swapPart in swapParts )
-            {
-                if(swapPart.type.Equals(type)) { part.PartImage = swapPart.GetSelectedPart(); break; }
-            }
-        }
-    }
-
-
-    // Start is called before the first frame update
     void Start()
     {
-        this.GetComponent<Button>().onClick.AddListener(MakeDaMonster);
+        makeButton.onClick.AddListener(MakeDaMonster);
+        closeButton.onClick.AddListener(CloseMenuOk);
+        randomButton.onClick.AddListener(RandomizerOfMonsters);
+    }
+    
+    private void MakeDaMonster()
+    {
+        var baby = Instantiate(monster, SpawnPoint.transform.position, new Quaternion());
+        var babyMonsterScript = baby.GetComponent<MonsterScript>();
+        
+        foreach (var part in babyMonsterScript.GetBodyParts())
+        {
+            var type = part.type;
+            var side = part.side;
+            foreach( PartSwap swapPart in swapParts )
+            {
+                if (side.Equals(swapPart.side) && swapPart.type.Equals(type))
+                {
+                    part.SetPartImage(swapPart.GetSelectedPart());
+                    break;
+                }
+            }
+        }
+        
+        monsterMakerUI.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void CloseMenuOk()
     {
-        
+        monsterMakerUI.SetActive(false);
+    }
+    
+    private void RandomizerOfMonsters()
+    {
+        foreach (var part in swapParts)
+        {
+            part.RandomisePart();
+        }
     }
 }
