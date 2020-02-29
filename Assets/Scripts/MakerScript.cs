@@ -11,6 +11,7 @@ public class MakerScript : MonoBehaviour
     public List<PartSwap> swapParts;
     public GameObject SpawnPoint;
     public GameObject monster;
+    public float BirthScale = 0.001f;
     public GameObject monsterMakerUI;
 
     void Start()
@@ -23,6 +24,7 @@ public class MakerScript : MonoBehaviour
     private void MakeDaMonster()
     {
         var baby = Instantiate(monster, SpawnPoint.transform.position, new Quaternion());
+        baby.transform.localScale = new Vector3(BirthScale,BirthScale,BirthScale);
         var babyMonsterScript = baby.GetComponent<MonsterScript>();
         
         foreach (var part in babyMonsterScript.GetBodyParts())

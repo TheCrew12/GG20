@@ -17,7 +17,9 @@ public class Shaker : MonoBehaviour
 
     Vector3 startPosition;
     float initialDuration;
-    public bool CanShake = true;
+    public bool CanShake = false;
+
+    private AudioSource sound;
 
 
     // Start is called before the first frame update
@@ -27,13 +29,12 @@ public class Shaker : MonoBehaviour
         startPosition = shake.localPosition;
         initialDuration = duration;
         initPower = power;
+        sound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(!CanShake) {return;}
-
         if(shouldShake)
         {
             if(duration > 0)
@@ -55,11 +56,13 @@ public class Shaker : MonoBehaviour
 
     void OnMouseDown() 
     {
+        if(!CanShake) {return;}
         if(Input.GetMouseButton(0))
         {
             shouldShake = true;
             power += 0.2f;
             duration = initialDuration;
+            sound.Play();
         }
         
     }

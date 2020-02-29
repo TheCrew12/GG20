@@ -38,6 +38,10 @@ public class MotelScript : MonoBehaviour
     void OnTriggerStay2D(Collider2D other)
     {
         if(Timer > -1) {return;}
+        if (monstersInMotel.Count >= 2)
+        {
+            return; //No more monsters in motel
+        }
 
         var monster = other.gameObject.GetComponent<MonsterScript>();
 
@@ -84,29 +88,25 @@ public class MotelScript : MonoBehaviour
         }
     }
 
-    public void MakeBaby( MonsterScript parent1, MonsterScript parent2 )
+    private void MakeBaby( MonsterScript parent1, MonsterScript parent2 )
     {
-        List<PartScript> parts = new List<PartScript>();
-        parts.AddRange(parent1.GetBodyParts());
-        parts.AddRange(parent2.GetBodyParts());
-
-        parts = Utils.Shuffle<PartScript>(parts); //Randomize parts
+        var parentParts = new List<PartScript>();
+        parentParts.AddRange(parent1.GetBodyParts());
+        parentParts.AddRange(parent2.GetBodyParts());
+        parentParts = Utils.Shuffle(parentParts); //Randomize parts
 
         var baby = Instantiate(monster, returnPoint.transform.position, new Quaternion());
         baby.transform.localScale = new Vector3(BirthScale,BirthScale,BirthScale);
-
+        var babyMonsterScript = baby.GetComponent<MonsterScript>();
+        
         //Attach bodyparts
-        foreach (Transform child in baby.transform)
+        foreach (var babyPart in babyMonsterScript.GetBodyParts())
         {
-            var part = child.GetComponent<PartScript>();
-            if(part == null) {return;}
-            var type = part.type;
-
-            foreach( PartScript parentPart in parts )
+            foreach( PartScript parentPart in parentParts )
             {
-                if( parentPart.type.Equals(type) )
+                if( parentPart.type.Equals(babyPart.type) )
                 {
-                    //child = parentPart;
+                    babyPart.SetPartImage(parentPart.GetPartImage());
                     break;
                 }
             }

@@ -29,7 +29,7 @@ namespace DefaultNamespace
             
             foreach (GameObject monster in monsters)
             {
-                Destroy(monster);
+                monster.GetComponent<MonsterScript>().Burn();
             }
         }
     }

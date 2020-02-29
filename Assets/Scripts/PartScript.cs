@@ -43,5 +43,7 @@ public class PartScript : MonoBehaviour
 
     public void SetPartImage(Sprite newImage) => partImage = newImage;
 
+    public Sprite GetPartImage() => partImage;
+
     public void Update() => sp.sprite = partImage;
 }
