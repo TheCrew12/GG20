@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class MotelScript : MonoBehaviour
 {
+    public float AgeToBreed = 0.15f;
     public int CoolDown = 60;
     public float BirthScale = 0.001f;
     public int ClicksForBirth = 10;
     public GameObject monster;
     public GameObject returnPoint;
     public ParticleSystem loveParticles;
+    public AudioSource EnterSound;
     private List<MonsterScript> monstersInMotel;
     private int Timer = -1;
     private int ClickCounter = 0;
@@ -44,8 +46,9 @@ public class MotelScript : MonoBehaviour
         }
 
         var monster = other.gameObject.GetComponent<MonsterScript>();
+        if(monster == null) {return;}
 
-        if(monster.transform.localScale.x < monster.AdultAgeScale) {return;}//TOO YOUNG
+        if(monster.transform.localScale.x < AgeToBreed) {return;}//TOO YOUNG
         if(monster == null ) {return;} //ITS NOT A MONSTER
         if(monster.isInMotel) {return;} //ITS ALLREADY IN THE MOTEL
 
@@ -54,6 +57,7 @@ public class MotelScript : MonoBehaviour
         monster.isInMotel = true;
         monster.canMove = false;
         monstersInMotel.Add(monster);
+        EnterSound.Play();
 
         if(monstersInMotel.Count >= 2)
         {
@@ -102,11 +106,14 @@ public class MotelScript : MonoBehaviour
         //Attach bodyparts
         foreach (var babyPart in babyMonsterScript.GetBodyParts())
         {
-            foreach( PartScript parentPart in parentParts )
+            for(var i = parentParts.Count-1 ; i >= 0 ; i--)
             {
+                var parentPart = parentParts[i];
+                if(parentPart == null) {continue;}
                 if( parentPart.type.Equals(babyPart.type) )
                 {
                     babyPart.SetPartImage(parentPart.GetPartImage());
+                    parentParts[i] = null;
                     break;
                 }
             }

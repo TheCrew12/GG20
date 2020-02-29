@@ -82,25 +82,18 @@ public class PlazaScript : MonoBehaviour
         PlazaLoader.legs = Resources.LoadAll("Images/BodyParts/Legs", typeof(Sprite));
         PlazaLoader.mouths = Resources.LoadAll("Images/BodyParts/Mouths", typeof(Sprite));
         PlazaLoader.noses = Resources.LoadAll("Images/BodyParts/Noses", typeof(Sprite));
-
-        //StartUpStuff();
     }
 
-    private void StartUpStuff()
-    {
-        SpawnRandomMonster();
-    }
-
-    private void SpawnRandomMonster()
-    {
-        var baby = Instantiate(monster, this.transform.position, new Quaternion());
-
-        foreach (Transform child in baby.transform)
-        {
-            var part = child.GetComponent<PartScript>();
-            if(part == null) {return;}
-            var type = part.type;
-            part.SetPartImage(PlazaLoader.GetRandomPartOfType(type));
-        }
-    }
+    // private void SpawnRandomMonster()
+    // {
+    //     var baby = Instantiate(monster, this.transform.position, new Quaternion());
+    //
+    //     foreach (Transform child in baby.transform)
+    //     {
+    //         var part = child.GetComponent<PartScript>();
+    //         if(part == null) {return;}
+    //         var type = part.type;
+    //         part.SetPartImage(PlazaLoader.GetRandomPartOfType(type));
+    //     }
+    // }
 }

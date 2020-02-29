@@ -7,13 +7,16 @@ namespace DefaultNamespace
     {
         public Button makeAMonster;
         public Button resetMonsters;
+        public Button spawnBurger;
 
+        public GameObject BurgerObject;
         public GameObject MonsterMakerUI;
         
         private void Start() 
         {
             makeAMonster.onClick.AddListener(MakeAMonster);
             resetMonsters.onClick.AddListener(ResetMonsters);
+            spawnBurger.onClick.AddListener(SpawnBurger);
             
             MakeAMonster(); //Open the UI at startup
         }
@@ -31,6 +34,11 @@ namespace DefaultNamespace
             {
                 monster.GetComponent<MonsterScript>().Burn();
             }
+        }
+        
+        private void SpawnBurger()
+        {
+            Instantiate(BurgerObject);
         }
     }
 }
