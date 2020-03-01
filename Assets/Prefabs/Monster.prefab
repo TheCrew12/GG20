@@ -6447,8 +6447,10 @@ MonoBehaviour:
   AdultAgeScale: 0.12
   AgeUpScaleStep: 0.01
   AgeUpRate: 200
+  GraveStone: {fileID: 4401254508839822830, guid: ed1da77f6c2bb48e4872fde2a423a0cb,
+    type: 3}
   BurnObject: {fileID: 2435504857644889815}
-  DeathBurnTime: 140
+  DeathBurnTime: 200
 --- !u!114 &2873767694609657051
 MonoBehaviour:
   m_ObjectHideFlags: 0

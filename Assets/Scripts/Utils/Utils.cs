@@ -23,10 +23,10 @@ public static class Utils
         names.Add("Palma");
         names.Add("Exox");
         names.Add("Lana");
-        names.Add("Allista");
-        names.Add("Danal");
-        names.Add("Mavrik");
-        names.Add("Christon");
+        names.Add("Alistar");
+        names.Add("Danel");
+        names.Add("Mavric");
+        names.Add("Chrose");
         names.Add("Antap");
         names.Add("Membem");
         names.Add("Sada");
@@ -48,23 +48,23 @@ public static class Utils
         names.Add("Toast");
         names.Add("VHS");
         names.Add("Long");
-        names.Add("Nook");
+        names.Add("Tesco");
         names.Add("Pepsi");
         names.Add("Woofer");
         names.Add("Point");
-        names.Add("Egg");
+        names.Add("Marx");
         names.Add("Tall");
         names.Add("Long");
         names.Add("Flan");
-        names.Add("Siggler");
+        names.Add("Panasonic");
         names.Add("Axis");
-        names.Add("Timeninja");
-        names.Add("God");
-        names.Add("Lazy");
+        names.Add("Atari");
+        names.Add("Derian");
+        names.Add("Time");
         names.Add("Fool");
         names.Add("Livingston");
         names.Add("Sad");
-        names.Add("Squid");
+        names.Add("Volume");
         return Shuffle(names)[3];
     }
 }

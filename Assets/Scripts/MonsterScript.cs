@@ -32,6 +32,7 @@ public class MonsterScript : MonoBehaviour
     private int ageCounter = 0;
     
     //Burn System
+    public GameObject GraveStone;
     public GameObject BurnObject;
     public int DeathBurnTime = 30;
     private int burnTime = -1;
@@ -44,6 +45,8 @@ public class MonsterScript : MonoBehaviour
             burnTime++;
             if (burnTime > DeathBurnTime)
             {
+                var grave = Instantiate(GraveStone, transform.position, new Quaternion());
+                grave.GetComponent<GravestoneScript>().NameGrave(FirstName,LastName);
                 Destroy(gameObject);
             }
         }
@@ -143,5 +146,7 @@ public class MonsterScript : MonoBehaviour
         burnTime = 0;
         BurnObject.GetComponent<AudioSource>().Play();
         BurnObject.GetComponent<ParticleSystem>().Play();
+        Speed *= 2;
+        StepTime /= 2;
     }
 }
