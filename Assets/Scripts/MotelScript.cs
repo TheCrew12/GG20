@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class MotelScript : MonoBehaviour
@@ -11,6 +12,7 @@ public class MotelScript : MonoBehaviour
     public int ClicksForBirth = 10;
     public GameObject monster;
     public GameObject returnPoint;
+    public TextMeshPro nameTag;
     public ParticleSystem loveParticles;
     public AudioSource EnterSound;
     private List<MonsterScript> monstersInMotel;
@@ -59,6 +61,8 @@ public class MotelScript : MonoBehaviour
         monster.canMove = false;
         monstersInMotel.Add(monster);
         EnterSound.Play();
+        
+        nameTag.text += monster.FirstName + " " + monster.LastName + " is in the motel!\n";
 
         if(monstersInMotel.Count >= 2)
         {
@@ -88,6 +92,7 @@ public class MotelScript : MonoBehaviour
                     shaker.CanShake = false;
                     Timer = 0;
                     ClickCounter = 0;
+                    nameTag.text = "";
                 }
             }
         }

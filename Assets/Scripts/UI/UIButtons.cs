@@ -36,9 +36,11 @@ namespace DefaultNamespace
             }
         }
         
-        private void SpawnBurger()
+        private void SpawnBurger() 
         {
-            Instantiate(BurgerObject);
+            var cameraPos = Camera.main.transform.position; //Puts burger in center of screen
+            cameraPos.z = 0;
+            Instantiate(BurgerObject, cameraPos, new Quaternion());
         }
     }
 }
