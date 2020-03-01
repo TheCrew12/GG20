@@ -5,6 +5,7 @@ using UnityEngine;
 public class MotelScript : MonoBehaviour
 {
     public float AgeToBreed = 0.15f;
+    public float AgeUpPerVisit = 0.1f;
     public int CoolDown = 60;
     public float BirthScale = 0.001f;
     public int ClicksForBirth = 10;
@@ -94,6 +95,11 @@ public class MotelScript : MonoBehaviour
 
     private void MakeBaby( MonsterScript parent1, MonsterScript parent2 )
     {
+        //Make parents bigger
+        parent1.AdultAgeScale += AgeUpPerVisit;
+        parent2.AdultAgeScale += AgeUpPerVisit;
+        
+        //Make baby
         var parentParts = new List<PartScript>();
         parentParts.AddRange(parent1.GetBodyParts());
         parentParts.AddRange(parent2.GetBodyParts());
@@ -101,7 +107,10 @@ public class MotelScript : MonoBehaviour
 
         var baby = Instantiate(monster, returnPoint.transform.position, new Quaternion());
         baby.transform.localScale = new Vector3(BirthScale,BirthScale,BirthScale);
+        
         var babyMonsterScript = baby.GetComponent<MonsterScript>();
+        babyMonsterScript.FirstName = Utils.GetRandomFirstName();
+        babyMonsterScript.LastName = parent1.LastName;
         
         //Attach bodyparts
         foreach (var babyPart in babyMonsterScript.GetBodyParts())

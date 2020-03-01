@@ -1,9 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class MonsterScript : MonoBehaviour
 {
+    //Names
+    public string FirstName = "";
+    public string LastName = "";
+    public TextMeshPro NameTag;
+    
     public float stepSize = 0.2f;
     public bool isInMotel = false;
     public bool canMove = true;
@@ -29,7 +35,6 @@ public class MonsterScript : MonoBehaviour
     public GameObject BurnObject;
     public int DeathBurnTime = 30;
     private int burnTime = -1;
-    
 
     void FixedUpdate()
     {
@@ -70,6 +75,9 @@ public class MonsterScript : MonoBehaviour
                 this.transform.localScale = new Vector3(scale,scale,scale);
             }
         }
+        
+        //Names
+        NameTag.text = FirstName + " " + LastName;
     }
 
     //Gets all the body parts of a monster

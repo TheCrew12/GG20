@@ -39,6 +39,7 @@ public class PartScript : MonoBehaviour
     {
         sp = this.GetComponent<SpriteRenderer>();
         if(invert) { sp.flipX = true; }
+        if(partImage == null) {partImage = sp.sprite;}
     }
 
     public void SetPartImage(Sprite newImage) => partImage = newImage;
